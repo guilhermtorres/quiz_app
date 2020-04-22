@@ -24,9 +24,12 @@ class Resultado extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
         Center(
-          child: Text(
-            fraseResultado,
-            style: TextStyle(fontSize: 28),
+          child: Container(
+            margin: EdgeInsets.all(40),
+            child: Text(
+              fraseResultado,
+              style: TextStyle(fontSize: 28),
+            ),
           ),
         ),
         FlatButton(

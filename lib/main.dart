@@ -108,6 +108,7 @@ class _PerguntaAppState extends State<PerguntaApp> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
+          centerTitle: true,
           title: Text("FINDRISC: DIABETES TIPO 2"),
         ),
         body: temPerguntaSelecionada
