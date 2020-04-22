@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:quiz_app/resultado.dart';
-import './questionário.dart';
+import './questionario.dart';
 
 main() => runApp(new PerguntaApp());
 
@@ -10,30 +10,75 @@ class _PerguntaAppState extends State<PerguntaApp> {
 
   final List<Map<String, Object>> _perguntas = const [
     {
-      'texto': 'Qual é a sua cor favorita?',
+      'texto': '1) Qual é a sua idade?',
       'respostas': [
-        {'texto': 'Preto', 'pontuação': 10},
-        {'texto': 'Branco', 'pontuação': 5},
-        {'texto': 'Azul', 'pontuação': 3},
-        {'texto': 'Vermelho', 'pontuação': 1},
+        {'texto': '< 45 anos', 'pontuação': 0},
+        {'texto': '45 - 54 anos', 'pontuação': 2},
+        {'texto': '55 -64 anos', 'pontuação': 3},
+        {'texto': '> 64 anos', 'pontuação': 4},
       ],
     },
     {
-      'texto': 'Qual é seu animal favorito?',
+      'texto': '2) Qual é o seu índice de massa corporal?',
       'respostas': [
-        {'texto': 'Garça', 'pontuação': 1},
-        {'texto': 'Lemore', 'pontuação': 3},
-        {'texto': 'Aguia', 'pontuação': 5},
-        {'texto': 'Pintassilgo', 'pontuação': 10},
+        {'texto': '< 25 IMC', 'pontuação': 0},
+        {'texto': '25 -30 IMC', 'pontuação': 1},
+        {'texto': '30 - 32 IMC', 'pontuação': 2},
+        {'texto': '> 32 IMC', 'pontuação': 3},
       ],
     },
     {
-      'texto': 'Qual é a sua banda favorita?',
+      'texto': '3) Qual é a sua medida de cintura?',
       'respostas': [
-        {'texto': 'CPM', 'pontuação': 3},
-        {'texto': 'Blink', 'pontuação': 1},
-        {'texto': 'Red Hot', 'pontuação': 5},
-        {'texto': 'Queen', 'pontuação': 10},
+        {'texto': 'Homens: <94 cm Mulheres: <80cm', 'pontuação': 0},
+        {'texto': 'Homens: 94 - 98 cm Mulheres: 80 - 84 cm', 'pontuação': 2},
+        {'texto': 'Homens: 98 - 102 cm Mulheres: 84 - 88cm', 'pontuação': 3},
+        {'texto': 'Homens: >102 cm Mulheres: > 88 cm', 'pontuação': 4},
+      ],
+    },
+    {
+      'texto': '4) Quantas vezes pratica exercícios físicos por pelo menos 30 minutos?',
+      'respostas': [
+        {'texto': '5 Vezes por semana', 'pontuação': 0},
+        {'texto': '3 vezes por semana', 'pontuação': 2},
+        {'texto': '1 vez por semana', 'pontuação': 3},
+        {'texto': 'Nenhuma vez na semana', 'pontuação': 4},
+      ],
+    },
+    {
+      'texto': '5) Quantas vezes consome vegetais e frutas?',
+      'respostas': [
+        {'texto': '5 Vezes por semana', 'pontuação': 0},
+        {'texto': '3 vezes por semana', 'pontuação': 2},
+        {'texto': '1 vez por semana', 'pontuação': 3},
+        {'texto': 'Nenhuma vez na semana', 'pontuação': 4},
+      ],
+    },
+    {
+      'texto': '6) Já tomou algum medicamento para hipertensão arterial?',
+      'respostas': [
+        {'texto': 'Nunca tomei', 'pontuação': 0},
+        {'texto': 'Tomei por algum tempo e parei', 'pontuação': 2},
+        {'texto': 'Tomo diariamente', 'pontuação': 3},
+        {'texto': 'Preciso tomar, mas não tomo', 'pontuação': 4},
+      ],
+    },
+    {
+      'texto': '7) Alguma vez teve açucar elevado no sangue?',
+      'respostas': [
+        {'texto': 'Não! Nuca!', 'pontuação': 0},
+        {'texto': 'Sim! Uma vez!', 'pontuação': 2},
+        {'texto': 'Sim! Já aconteceu mais de uma vez', 'pontuação': 3},
+        {'texto': 'Sim! Frequentemente', 'pontuação': 4},
+      ],
+    },
+    {
+      'texto': '8) Tem algum membro na família ou outros familiares que foram diagnosticados com diabetes (tipo 1 ou tipo2)?',
+      'respostas': [
+        {'texto': 'Não!', 'pontuação': 0},
+        {'texto': 'Sim! Tios ou Primos', 'pontuação': 2},
+        {'texto': 'Sim! Avós', 'pontuação': 3},
+        {'texto': 'Sim! Pais, irmãos ou filhos', 'pontuação': 5},
       ],
     },
   ];
@@ -63,7 +108,7 @@ class _PerguntaAppState extends State<PerguntaApp> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text("Perguntas"),
+          title: Text("FINDRISC: DIABETES TIPO 2"),
         ),
         body: temPerguntaSelecionada
             ? Questionario(

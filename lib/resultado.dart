@@ -6,13 +6,15 @@ class Resultado extends StatelessWidget {
   Resultado(this.pontuacao, this.reiniciarQuestionario);
   String get fraseResultado {
     if (pontuacao < 8) {
-      return 'Parabéns';
-    } else if (pontuacao < 12) {
-      return 'Você é bom!';
-    } else if (pontuacao < 16) {
-      return 'Impressionante!';
+      return 'Risco calculado de vir a ter diabetes tipo 2 dentro de 10 anos: Baixo (1 em 100)';
+    } else if (pontuacao < 15) {
+      return 'Risco calculado de vir a ter diabetes tipo 2 dentro de 10 anos: Pouco Elevado (1 em 25)';
+    } else if (pontuacao < 20) {
+      return 'Risco calculado de vir a ter diabetes tipo 2 dentro de 10 anos: Moderado (1 em 6)';
+    } else if (pontuacao < 25) {
+      return 'Risco calculado de vir a ter diabetes tipo 2 dentro de 10 anos: Alto (1 em 3)';
     } else {
-      return 'Nível Jedi!';
+      return 'Risco calculado de vir a ter diabetes tipo 2 dentro de 10 anos: Muito Alto (1 em 2)';
     }
   }
 
